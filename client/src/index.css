@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  background-color: #212121;
+  color: #bdbdbd;
+  display: flex;
+  justify-content: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
