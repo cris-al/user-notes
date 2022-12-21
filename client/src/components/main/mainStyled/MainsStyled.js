@@ -6,6 +6,7 @@ export const MainContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 1rem;
 `;
 
 export const Container2 = styled.div`

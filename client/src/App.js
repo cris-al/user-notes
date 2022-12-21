@@ -4,10 +4,11 @@ import Login from "./components/login/Login";
 import Main from "./components/main/Main";
 import Register from "./components/register/Register";
 import { privateRoutes } from "./routes/routes";
+import "./App.css";
 
 function App() {
   return (
-    <div className="col-12 d-flex justify-content-center">
+    <div className="app">
       <Routes>
         <Route exact path="/" element={<Main />} />
         <Route path={privateRoutes.HOME} element={<Home />} />

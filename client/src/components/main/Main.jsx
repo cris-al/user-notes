@@ -41,8 +41,8 @@ export default function Main() {
             gustes.
           </Paragraph>
           <ButtonContainer>
-            <Button text="LOGUEARME" onClick={toLogin} />
-            <Button text="REGISTRARME" onClick={toRegister} />
+            <Button text="Iniciar Sesión" onClick={toLogin} />
+            <Button text="Registrarme" onClick={toRegister} />
           </ButtonContainer>
         </Container2>
       </Container1>

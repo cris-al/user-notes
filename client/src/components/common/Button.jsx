@@ -11,7 +11,7 @@ const ButtonStyled = styled.button`
   padding: 0.8rem;
   box-shadow: 1px 2px 6px black;
   color: ${word.grey};
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   &:hover {
     cursor: pointer;
     background-color: ${({ backgroundColor }) =>

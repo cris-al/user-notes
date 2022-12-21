@@ -1,10 +1,16 @@
 import styled from "styled-components";
+import { Colors } from "../../themes/themes";
 
 const InputStyled = styled.input`
   border: none;
   border-radius: 5px;
-  height: 30px;
-  padding: 0.2rem 0.6rem;
+  font-size: 1rem;
+  padding: 0.5rem 0.7rem;
+  background-color: ${Colors.background.grey};
+  color: ${Colors.word.grey};
+  @media and screen (min-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export default function Input({
@@ -13,6 +19,7 @@ export default function Input({
   handleChange,
   value,
   placeholder,
+  handleBlur,
 }) {
   return (
     <InputStyled
@@ -21,6 +28,7 @@ export default function Input({
       value={value}
       onChange={handleChange}
       placeholder={placeholder}
+      onBlur={handleBlur}
     />
   );
 }

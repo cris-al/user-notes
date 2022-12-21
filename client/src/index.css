@@ -1,11 +1,12 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: "Merriweather", serif;
   background-color: #212121;
   color: #bdbdbd;
   display: flex;
   justify-content: center;
-  max-width: 1400px;
+  align-items: center;
 }
 
 code {
