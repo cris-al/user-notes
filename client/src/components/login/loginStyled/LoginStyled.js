@@ -7,14 +7,13 @@ export const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 1rem;
 `;
 
 export const FormLogin = styled.form`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   border: 1px solid ${Colors.background.grey};
   border-radius: 1rem;
   padding: 1.5rem;
@@ -52,6 +51,7 @@ export const ButtonContainer = styled.div`
 
 export const Paragraph = styled.p`
   font-size: 0.8rem;
+  margin-top: 2rem;
   @media screen and (min-width: 375px) {
     font-size: 0.9rem;
   }

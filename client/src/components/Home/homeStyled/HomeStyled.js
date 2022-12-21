@@ -3,17 +3,27 @@ import { Colors } from "../../../themes/themes";
 
 export const HomeContainer = styled.div`
   display: flex;
-  margin: 1rem 0;
+  flex-direction: column;
+  width: 100%;
 `;
 
-export const CardContainer = styled.div`
+export const Card = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 0 1rem 1rem 1rem;
   background-color: ${Colors.background.blue};
-  overflow-y: scroll;
+  transition: 0.5s;
+  height: 220px;
+  box-shadow: 0 0 8px ${Colors.shadow.black};
+  @media screen and (min-width: 375px) {
+    height: 300px;
+  }
+`;
 
+export const Container = styled.div`
+  overflow-y: auto;
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
   ::-webkit-scrollbar-thumb {
     background: ${Colors.background.green};
@@ -24,46 +34,48 @@ export const CardContainer = styled.div`
   }
 `;
 
-export const NoteContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  height: 100%;
-  gap: 1rem;
+export const Div = styled.div`
+  margin: 1rem 0;
 `;
 
-export const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0 1rem;
-  transition: 0.5s;
+export const Text = styled.h3`
+  font-size: 1.1rem;
+`;
+
+export const Paragraph = styled.p`
+  font-size: 0.9rem;
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
   &:hover {
-    background-color: ${Colors.hover.blue};
-    cursor: pointer;
+    box-shadow: 0 0 5px ${Colors.shadow.grey};
+  }
+  @media screen and (min-width: 375px) {
+    height: 240px;
+  }
+  @media screen and (min-width: 576px) {
+    height: 240px;
+    width: 240px;
   }
 `;
+// export const CardContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   background-color: ${Colors.background.blue};
+//   overflow-y: scroll;
 
-export const Header = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: ${Colors.background.blue};
-  padding: 0.3rem 1rem;
-`;
-
-export const Note = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0.3rem 1rem;
-`;
-
-export const Div = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const ButtonContainer = styled.div`
-  display: flex;
-  gap: 1rem;
-`;
+// ::-webkit-scrollbar {
+//   width: 10px;
+// }
+// ::-webkit-scrollbar-thumb {
+//   background: ${Colors.background.green};
+//   border-radius: 5px;
+// }
+// ::-webkit-scrollbar-thumb:hover {
+//   background: ${Colors.hover.green};
+// }
+// `;

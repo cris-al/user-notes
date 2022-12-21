@@ -1,16 +1,18 @@
 import { notes } from "./utilities/utilities";
 import {
   HomeContainer,
-  CardContainer,
-  Note,
-  Div,
-  ButtonContainer,
   Card,
-  NoteContainer,
-  Header,
+  Text,
+  Paragraph,
+  Image,
+  Container,
+  Div,
 } from "./homeStyled/HomeStyled";
 import { useState } from "react";
 import Button from "../common/Button";
+import Header from "components/Header/Header";
+import SubTitle from "components/common/SubTitle";
+import ImageTest from "assets/tree-736885__480.jpg";
 
 export default function Home() {
   const [note, setNote] = useState({
@@ -27,35 +29,29 @@ export default function Home() {
 
   return (
     <HomeContainer>
-      <CardContainer>
-        <h3 style={{ marginLeft: "1rem" }}>Mis Notas: </h3>
-        {notes?.map((el) => (
-          <Card onClick={(e) => handleClick(e, el)}>
-            <h4>{el.title}</h4>
-            <p>{el.content}</p>
-          </Card>
-        ))}
-      </CardContainer>
-      <NoteContainer>
-        <Header>
-          <h1>Notas de Usuario</h1>
-          <Button text="Nueva Nota" />
-        </Header>
-        {note.title ? (
-          <Note>
-            <Div>
-              <h2>{note.title}</h2>
-              <ButtonContainer>
-                <Button text="Editar" />
-                <Button text="Eliminar" backgroundColor="red" />
-              </ButtonContainer>
-            </Div>
-            <p>{note.content}</p>
-          </Note>
-        ) : (
-          <h3>Loading...</h3>
-        )}
-      </NoteContainer>
+      <Header />
+      <Div>
+        <SubTitle text="Última Nota:" />
+        <Card>
+          <Text>Nota Final</Text>
+          <Container>
+            <Paragraph>
+              Esta es mi ultima nota, debo aclarar que bla bla bla Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Officia ipsum magni
+              sunt eaque quod dolor quibusdam esse similique odit! Magnam error
+              in bla basdal dawlkjdasd asdw dasdaw adaf asofjkdk odjkf woiefj
+              ldskjf sldfhjskeufh sdjfhs eufh idjfh ks
+            </Paragraph>
+          </Container>
+        </Card>
+      </Div>
+      <Div>
+        <SubTitle text="Última Imagen:" />
+        <Card>
+          <Text>Titulo de la imagen</Text>
+          <Image src={ImageTest} alt="IMAGEN DE PRUEBA" />
+        </Card>
+      </Div>
     </HomeContainer>
   );
 }

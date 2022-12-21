@@ -15,4 +15,8 @@ export const Colors = {
     blue: "#1565c0",
     grey: "#eeeeee",
   },
+  shadow: {
+    grey: "#eeeeee",
+    black: "black",
+  },
 };

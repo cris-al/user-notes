@@ -2,49 +2,51 @@ import {
   Form,
   InputContainer,
   RegisterContainer,
-  Container1,
-  Container2,
+  ButtonContainer,
+  Paragraph,
+  LinkStyle,
+  Label,
 } from "./registerStyled/RegisterStyled";
 import Input from "../common/Input";
 import Button from "../common/Button";
-import { Image } from "./registerStyled/RegisterStyled";
-import NotesIcon from "../../assets/notes-icon.svg";
+import Title from "components/common/Title";
+import { privateRoutes } from "routes/routes";
 
 export default function Register() {
   return (
     <RegisterContainer>
-      <Image src={NotesIcon} alt="icono de notas" />
-      <Container1>
-        <h1>Registrarme</h1>
-        <Form>
-          <Container2>
-            <InputContainer>
-              <label>Nombre: </label>
-              <Input type="text" name="name" placeholder="Nombre..." />
-            </InputContainer>
+      <div>
+        <Title text="Registrate" />
+      </div>
+      <Form>
+        <InputContainer>
+          <Label>Nombre: </Label>
+          <Input type="text" name="name" placeholder="Nombre..." />
+        </InputContainer>
 
-            <InputContainer>
-              <label>Apellido: </label>
-              <Input type="text" name="lastName" placeholder="Apellido..." />
-            </InputContainer>
+        <InputContainer>
+          <Label>Email: </Label>
+          <Input type="email" name="email" placeholder="Email..." />
+        </InputContainer>
 
-            <InputContainer>
-              <label>Email: </label>
-              <Input type="email" name="email" placeholder="Email..." />
-            </InputContainer>
+        <InputContainer>
+          <Label>Contraseña: </Label>
+          <Input type="password" name="password" placeholder="Contraseña..." />
+        </InputContainer>
 
-            <InputContainer>
-              <label>Contraseña: </label>
-              <Input
-                type="password"
-                name="password"
-                placeholder="Contraseña..."
-              />
-            </InputContainer>
-          </Container2>
-          <Button text="REGISTRARME" type="submit" />
-        </Form>
-      </Container1>
+        <InputContainer>
+          <Label>Repetir contraseña: </Label>
+          <Input type="password" name="password" placeholder="Contraseña..." />
+        </InputContainer>
+
+        <ButtonContainer>
+          <Button text="Registrarme" type="submit" />
+        </ButtonContainer>
+      </Form>
+      <Paragraph>
+        ¿Ya tienes una cuenta?{" "}
+        <LinkStyle to={privateRoutes.LOGIN}>Inicia Sesión.</LinkStyle>
+      </Paragraph>
     </RegisterContainer>
   );
 }
