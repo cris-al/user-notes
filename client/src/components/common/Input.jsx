@@ -14,7 +14,7 @@ const InputStyled = styled.input`
 `;
 
 export default function Input({
-  type,
+  type = "text",
   name,
   handleChange,
   value,
