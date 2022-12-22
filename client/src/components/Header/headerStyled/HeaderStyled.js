@@ -7,7 +7,6 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: ${Colors.background.blue};
-  width: 100vw;
   height: 60px;
   box-shadow: 0 0 8px ${Colors.shadow.black};
   @media screen and (min-width: 576px) {

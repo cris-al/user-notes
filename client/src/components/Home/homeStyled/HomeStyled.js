@@ -4,7 +4,6 @@ import { Colors } from "../../../themes/themes";
 export const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
 `;
 
 export const Card = styled.div`
