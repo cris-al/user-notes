@@ -14,11 +14,11 @@ export const FormLogin = styled.form`
   flex-direction: column;
   gap: 2rem;
   margin-top: 1.5rem;
-  border: 1px solid ${Colors.background.grey};
   border-radius: 1rem;
   padding: 1.5rem;
   @media screen and (min-width: 375px) {
-    width: 280px;
+    width: 290px;
+    border: 1px solid ${Colors.background.grey};
   }
   @media screen and (min-width: 576px) {
     width: 330px;
@@ -26,6 +26,13 @@ export const FormLogin = styled.form`
   @media screen and (min-width: 768px) {
     width: 400px;
     padding: 2.5rem;
+  }
+  @media screen and (min-width: 992px) {
+    width: 500px;
+    padding: 2.8rem;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 580px;
   }
 `;
 

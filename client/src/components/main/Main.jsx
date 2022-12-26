@@ -24,7 +24,7 @@ export default function Main() {
     navigate(privateRoutes.REGISTER);
   }
   return (
-    <MainContainer>
+    <MainContainer className="my-4 my-sm-5">
       <div className="d-flex text-center">
         <Title>Notas de Usuario</Title>
       </div>

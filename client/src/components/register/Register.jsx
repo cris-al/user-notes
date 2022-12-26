@@ -14,7 +14,7 @@ import { privateRoutes } from "routes/routes";
 
 export default function Register() {
   return (
-    <RegisterContainer>
+    <RegisterContainer className="my-4 my-sm-5">
       <div>
         <Title text="Registrate" />
       </div>

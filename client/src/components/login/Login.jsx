@@ -19,7 +19,7 @@ export default function Login() {
     useLoginHook();
 
   return (
-    <MainContainer>
+    <MainContainer className="my-4 my-sm-5">
       <div>
         <Title text="Inicia Sesión" />
       </div>

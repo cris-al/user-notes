@@ -59,3 +59,17 @@ export const TextArea = styled.textarea`
     font-size: 1.1rem;
   }
 `;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+export const Error = styled.div`
+  color: red;
+  font-size: 0.7rem;
+  text-decoration: none;
+  @media screen and (min-width: 768px) {
+    font-size: 0.8rem;
+  }
+`;
