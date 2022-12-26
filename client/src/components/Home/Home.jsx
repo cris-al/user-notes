@@ -13,8 +13,10 @@ import Button from "../common/Button";
 import Header from "components/Header/Header";
 import SubTitle from "components/common/SubTitle";
 import ImageTest from "assets/tree-736885__480.jpg";
+import SideBar from "components/SideBar/SideBar";
 
 export default function Home() {
+  const [show, setShow] = useState(false);
   const [note, setNote] = useState({
     title: "",
     content: "",
@@ -29,8 +31,9 @@ export default function Home() {
 
   return (
     <HomeContainer>
-      <Header />
-      <Div>
+      <Header show={show} setShow={setShow} />
+      <SideBar show={show} setShow={setShow} />
+      <Div className="my-4 my-sm-5">
         <SubTitle text="Última Nota:" />
         <Card>
           <Text>Nota Final</Text>
