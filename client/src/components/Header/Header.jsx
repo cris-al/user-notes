@@ -8,6 +8,7 @@ import {
   Image,
 } from "./headerStyled/HeaderStyled";
 import NotesIcon from "assets/notes-icon.svg";
+import { Colors } from "themes/themes";
 
 export default function Header({ show, setShow }) {
   function handleShow(e) {
@@ -18,7 +19,20 @@ export default function Header({ show, setShow }) {
   return (
     <HeaderContainer>
       <Image src={NotesIcon} alt="imagen" />
-      <Button text="Aqui" onClick={handleShow} />
+      <div className="d-flex gap-3">
+        <Button
+          text="Iniciar Sesión"
+          onClick={handleShow}
+          backgroundColor={Colors.background.blue}
+          backgroundHover={Colors.hover.blue}
+        />
+        <Button
+          text="Registrarme"
+          onClick={handleShow}
+          backgroundColor={Colors.background.red}
+          backgroundHover={Colors.hover.red}
+        />
+      </div>
       {/* <LinksContainer>
         <LinkStyled to={privateRoutes.NOTES}>
           <Paragraph>Notas</Paragraph>

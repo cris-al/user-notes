@@ -8,20 +8,29 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { privateRoutes } from "./routes/routes";
 import "./App.css";
 import Notes from "components/Notes/Notes";
+import Layout from "components/Layout/Layout";
+import WindowsSize from "components/common/WindowsSize";
 
 function App() {
   return (
-    <div className="app">
-      <Routes>
-        <Route exact path="/" element={<Main />} />
-        <Route path={privateRoutes.HOME} element={<Home />} />
-        <Route path={privateRoutes.LOGIN} element={<Login />} />
-        <Route path={privateRoutes.REGISTER} element={<Register />} />
-        <Route path={privateRoutes.NOTES} element={<Notes />} />
-        <Route path={privateRoutes.CREATEFORM} element={<NotesForm />} />
-        <Route path={privateRoutes.EDITFORMWITHID} element={<NotesForm />} />
-      </Routes>
-    </div>
+    <Layout>
+      <div className="app">
+        <WindowsSize>
+          <Routes>
+            <Route exact path="/" element={<Main />} />
+            <Route path={privateRoutes.HOME} element={<Home />} />
+            <Route path={privateRoutes.LOGIN} element={<Login />} />
+            <Route path={privateRoutes.REGISTER} element={<Register />} />
+            <Route path={privateRoutes.NOTES} element={<Notes />} />
+            <Route path={privateRoutes.CREATEFORM} element={<NotesForm />} />
+            <Route
+              path={privateRoutes.EDITFORMWITHID}
+              element={<NotesForm />}
+            />
+          </Routes>
+        </WindowsSize>
+      </div>
+    </Layout>
   );
 }
 

@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <HomeContainer>
-      <Header show={show} setShow={setShow} />
+      {/* <Header show={show} setShow={setShow} /> */}
       <SideBar show={show} setShow={setShow} />
       <Div className="my-4 my-sm-5">
         <SubTitle text="Última Nota:" />

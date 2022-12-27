@@ -6,9 +6,6 @@ body {
   padding: 0;
   background-color: #212121 !important;
   color: #bdbdbd !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 code {

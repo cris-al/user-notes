@@ -1,3 +1,5 @@
 .app {
-  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
